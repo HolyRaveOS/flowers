@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+  @@include('html/_head.htm',{ "title":"HomePage" })
+
+  <body>
+    <div class="wrapper">
+      @@include('html/_header.htm',{})
+      <main class="page">
+        <section class="hero">
+          <div class="hero__info">
+            <div class="hero__body">
+              <h1 class="hero__title">Flowers</h1>
+              <p class="hero__subtitle">Design for your big day</p>
+              <div class="hero__text">
+                <p>
+                  We help to create fabulous moments with the help of flowers.
+                  We invite you to the world of incredible floral creations and
+                  designs
+                </p>
+              </div>
+              <a class="hero__link btn" href="#!">
+                <span class="btn__text">Order</span>
+                <span class="btn__border"></span>
+                <span>
+                  <svg
+                    width="24"
+                    height="14"
+                    viewBox="0 0 24 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 0C16 0.742 16.733 1.85 17.475 2.78C18.429 3.98 19.569 5.027 20.876 5.826C21.856 6.425 23.044 7 24 7M24 7C23.044 7 21.855 7.575 20.876 8.174C19.569 8.974 18.429 10.021 17.475 11.219C16.733 12.15 16 13.26 16 14M24 7L0 7"
+                      stroke="white"
+                    />
+                  </svg>
+                </span>
+              </a>
+              <span class="hero__heading heading">by Paradise</span>
+            </div>
+          </div>
+          <div class="hero__slider swiper">
+            <span>Paradise</span>
+            <div class="hero__wrapper swiper-wrapper">
+              <div class="hero__slide swiper-slide">
+                <img src="@img/hero/bg-1.jpg" alt="Image" />
+              </div>
+              <div class="hero__slide swiper-slide">
+                <img src="@img/hero/bg-2.jpg" alt="Image" />
+              </div>
+            </div>
+            <div class="hero__swiper-pagination"></div>
+            <div class="hero__swiper-navigation">
+              <button type="button" class="hero__button-prev"></button>
+              <button type="button" class="hero__button-next"></button>
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="about__container">
+            <div class="about__info-item">
+              <span class="about__heading heading heading--green"
+                >About us
+              </span>
+              <h2 class="about__title title">Paradise</h2>
+              <div class="about__text">
+                <p>
+                  Our journey began with a small ideal corner of nature, which
+                  we decided to call "Flower Paradise". This is where we started
+                  sharing our passion for flowers by creating our own flower
+                  arrangements for family and friends.
+                </p>
+                <p>
+                  We see each flower bouquet or composition as a unique
+                  masterpiece that expresses feelings, shades beauty and is
+                  remembered forever.
+                </p>
+                <p>
+                  Our mission is to give flowers a new dimension of life and
+                  transform them into expressive artistic masterpieces.
+                </p>
+                <p>
+                  Join us on our journey into the world of flowers, and together
+                  we will create an incredible floral symphony for your special
+                  moments. Thank you for choosing us to create the best moments
+                  of your life!"
+                </p>
+              </div>
+              <a class="about__link btn btn--green" href="#!">
+                <span class="btn__text">About us</span>
+                <span class="btn__border"></span>
+                <span>
+                  <svg
+                    width="24"
+                    height="14"
+                    viewBox="0 0 24 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M16 0C16 0.742 16.733 1.85 17.475 2.78C18.429 3.98 19.569 5.027 20.876 5.826C21.856 6.425 23.044 7 24 7M24 7C23.044 7 21.855 7.575 20.876 8.174C19.569 8.974 18.429 10.021 17.475 11.219C16.733 12.15 16 13.26 16 14M24 7L0 7"
+                      stroke="white"
+                    />
+                  </svg>
+                </span>
+              </a>
+            </div>
+            <div class="about__images-item">
+              <img
+                class="about__img about__img--1"
+                src="@img/about/1.jpg"
+                alt="Image"
+              />
+              <img
+                class="about__img about__img--2"
+                src="@img/about/2.jpg"
+                alt="Image"
+              />
+              <img
+                class="about__img about__img--3"
+                src="@img/about/3.jpg"
+                alt="Image"
+              />
+              <span class="about__images-text">Beauty flower</span>
+            </div>
+          </div>
+        </section>
+      </main>
+      @@include('html/_footer.htm',{})
+    </div>
+  </body>
+</html>

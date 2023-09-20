@@ -1,0 +1,146 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.hover {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	line-height: 1;
+
+	&::after {
+		content: '';
+		width: 95%;
+		transform: scale(0);
+		height: toRem(1);
+		background-color: var(--white-color);
+		transition: transform 0.1s;
+	}
+
+	&:hover {
+		&::after {
+			transform: scale(1);
+		}
+	}
+}
+
+.btn {
+	position: relative;
+	display: inline-flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: toRem(15) toRem(35) toRem(15) toRem(25);
+	min-width: toRem(210);
+	border-radius: toRem(20);
+	border: solid 1px var(--white-color);
+	font-size: toRem(20);
+	text-transform: uppercase;
+	overflow: hidden;
+	transition: border 0.3s;
+
+	&__text {
+		z-index: 2;
+		transition: transform 0.7s;
+	}
+
+	&__border {
+		position: absolute;
+		right: toRem(20);
+		min-width: toRem(50);
+		height: toRem(30);
+		border-radius: toRem(20);
+		border: solid 1px var(--white-color);
+	}
+
+	span:not([class]) {
+		z-index: 1;
+		transition: transform 0.7s;
+	}
+
+	&::after {
+		content: '';
+		position: absolute;
+		width: 0;
+		height: 100%;
+		left: 0;
+		top: 0;
+		border-radius: toRem(20);
+		background-color: var(--accented-color);
+		transition: width 0.7s;
+	}
+
+	&:hover {
+		border: solid 1px var(--accented-color);
+
+		&::after {
+			box-shadow: 0 0 0 2px var(--accented-color);
+			width: 100%;
+		}
+
+		.btn__text,
+		span:not([class]) {
+			transform: translateX(20%);
+		}
+	}
+
+	&--green {
+		border-color: var(--accented-color);
+		color: var(--accented-color);
+		transition: color 1s;
+
+		svg {
+			transition: all 1s;
+			fill: var(--accented-color);
+
+			path {
+				transition: all 1s;
+				stroke: var(--accented-color);
+			}
+		}
+
+		&:hover {
+			color: var(--white-color);
+
+			svg {
+				fill: var(--white-color);
+
+				path {
+					stroke: var(--white-color);
+				}
+			}
+		}
+
+		.btn__border {
+			border-color: var(--accented-color);
+		}
+	}
+}
+
+.heading {
+	font-family: 'Mr De Haviland';
+	font-size: 48px;
+	display: flex;
+	align-items: center;
+	gap: toRem(10);
+	color: var(--white-color);
+
+	&::before {
+		content: '';
+		width: toRem(90);
+		height: toRem(1);
+		background-color: var(--white-color);
+	}
+
+	&--green {
+		color: var(--accented-color);
+
+		&::before {
+			background-color: var(--accented-color);
+		}
+	}
+}
+
+.title {
+	font-family: 'Libre Baskerville';
+	@include adaptiveValue("font-size", 36, 30);
+	text-transform: uppercase;
+	@include adaptiveValue("margin-bottom", 40, 10);
+}
