@@ -24,14 +24,6 @@
 	.logo {
 		z-index: 5;
 
-		@media (max-width:$mobileSmall) {
-			height: toRem(50);
-		}
-
-		img {
-			@include adaptiveValue("width", 234, 165);
-		}
-
 		@media (max-width:$tablet) {
 			flex-grow: 1;
 		}
@@ -100,56 +92,11 @@
 	}
 
 	&__link {
-		padding: 0 22px;
-		display: block;
-		position: relative;
-
-		@media (min-width:$tablet) {
-			&::after {
-				content: '';
-				height: toRem(1);
-				width: 100%;
-				background-color: var(--white-color);
-				position: absolute;
-				left: 0;
-				bottom: toRem(-30);
-				opacity: 0;
-				transition: opacity 0.2s, bottom 0.4s;
-			}
-
-			&:hover {
-				span {
-					transform: translateY(-100%);
-					opacity: 1;
-					position: initial;
-				}
-
-				&::after {
-					opacity: 1;
-					bottom: toRem(10);
-				}
-			}
-
-			span {
-				transition: transform 0.4s, opacity 0.2s;
-				display: block;
-			}
-		}
-
 		@media (max-width:$tablet) {
 			display: block;
 			font-size: toRem(24);
 			padding: toRem(10) 0;
 			font-weight: 600;
-		}
-	}
-
-	&__text-hover {
-		opacity: 0;
-		pointer-events: none;
-
-		@media (max-width:$tablet) {
-			display: none;
 		}
 	}
 }
