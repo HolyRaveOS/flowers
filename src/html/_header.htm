@@ -1,6 +1,6 @@
 <header class="header">
   <div class="header__container">
-    <a href="#!" class="logo">
+    <a data-goto-header data-goto="#hero" href="#hero" class="logo">
       <img src="@img/logo.svg" alt="logo" width="234" height="68" />
     </a>
     <div class="header__menu menu">
@@ -11,25 +11,44 @@
       <nav class="menu__body">
         <ul class="menu__list">
           <li class="menu__item">
-            <a href="#!" class="menu__link nav-link">
+            <a
+              data-goto-top="95"
+              data-goto="#about"
+              href="#about"
+              class="menu__link nav-link"
+            >
               <span class="menu__text">About us</span>
               <span class="menu__text-hover nav-text-hover">About us</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#!" class="menu__link nav-link">
+            <a
+              data-goto-top="85"
+              href="#services"
+              data-goto="#services"
+              class="menu__link nav-link"
+            >
               <span class="menu__text">Services</span>
               <span class="menu__text-hover nav-text-hover">Services</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#!" class="menu__link nav-link">
+            <a
+              href="#prices"
+              data-goto-top="85"
+              data-goto="#prices"
+              class="menu__link nav-link"
+            >
               <span class="menu__text">Prices</span>
               <span class="menu__text-hover nav-text-hover">Prices</span>
             </a>
           </li>
           <li class="menu__item">
-            <a href="#!" class="menu__link nav-link">
+            <a
+              href="#contacts"
+              data-goto="#contacts"
+              class="menu__link nav-link"
+            >
               <span class="menu__text">Contacts</span>
               <span class="menu__text-hover nav-text-hover">Contacts</span>
             </a>

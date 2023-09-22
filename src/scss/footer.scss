@@ -5,8 +5,6 @@
 	background-color: var(--accented-color);
 	color: var(--white-color);
 
-	&__container {}
-
 	&__top {
 		display: flex;
 		flex-wrap: wrap;
@@ -14,11 +12,7 @@
 		justify-content: space-between;
 		@include adaptiveValue("margin-bottom", 30, 20);
 		@include adaptiveValue("column-gap", 40, 20);
-
-		@media (max-width:$tablet) {}
 	}
-
-	&__copy {}
 
 	&__nav {
 		@media (max-width:$tablet) {
@@ -47,12 +41,6 @@
 		}
 	}
 
-	&__nav-text {}
-
-	&__nav-text-hover {}
-
-	&__nav-nav-item {}
-
 	&__body {
 		display: flex;
 		justify-content: space-between;
@@ -79,7 +67,6 @@
 	&__address-link {
 		display: flex;
 		column-gap: toRem(10);
-
 
 		&:not(:last-child) {
 			margin-bottom: toRem(20);
@@ -166,6 +153,5 @@
 		}
 	}
 }
-
 
 //========================================================
